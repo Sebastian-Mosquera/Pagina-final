@@ -1,22 +1,102 @@
+---
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/jpg" href="public/icon.png" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>RitmoAcademic</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-gray-900 text-white font-sans">
+		<header class="bg-gray-800 p-8 ">
+			<a aria-label="Inicio"  href="/" class="flex gap-3"
+				><img src="public/icon.png" alt="Logo" class="h-30 w-30" />
+				<div class="">
+				<h1 class="text-4xl font-bold text-purple-400 mt-8">RitmoAcademic</h1>
+				<h2 class="text-4xl font-bold text-purple-600 drop-shadow ">
+					Sobre Nosotros
+				<p class="text-lg mt-2 text-white drop-shadow max-w-md">
+					RitmoAcademic es una plataforma digital que facilita la
+					conexión entre estudiante y docente, con enfoque
+					personalizado según el instrumento escogido (piano,
+					guitarra o canto vocal).
+				</p>
+			</h2>
+		</div>
+				<nav class="flex gap-6">
+					<a
+						href="#nosotros"
+						class="text-white hover:text-purple-400 font-semibold"
+						>Nosotros</a
+					>
+					<a
+						href="#cursos"
+						class="text-white hover:text-purple-400 font-semibold"
+						>Cursos</a
+					>
+					<a
+						href="#contacto"
+						class="text-white hover:text-purple-400 font-semibold"
+						>Contacto</a
+					>
+				</nav>
+				</a
+			>
+		</header>
+
+		<section id="nosotros" class="py-16 px-4 text-center">
+			<div class="flex items-center justify-center min-h-screen">
+				<div
+					class="w-full h-screen bg-[url('https://cdn.prod.website-files.com/655e0fa544c67c1ee5ce01c7/655e0fa544c67c1ee5ce0f13_8-easiest-instruments-to-learn-for-musicians-on-a-budget-header.jpeg')] bg-cover bg-center rounded shadow-lg flex flex-col items-center justify-center text-center px-6"
+				>
+				</div>
+			</div>
+		</section>
+
+		<section id="cursos" class="py-16 px-4 text-center">
+			<h2 class="text-3xl font-semibold text-purple-400">
+				Nuestros Cursos
+			</h2>
+			<div class="mt-10 flex flex-wrap justify-center gap-8">
+				<div class="bg-gray-800 rounded-2xl p-6 w-72 shadow-lg">
+					<h3 class="text-xl font-bold mb-2">Curso de Guitarra</h3>
+					<p>
+						Aprende desde los acordes básicos hasta técnicas
+						avanzadas con nuestros expertos guitarristas.
+					</p>
+				</div>
+				<div class="bg-gray-800 rounded-2xl p-6 w-72 shadow-lg">
+					<h3 class="text-xl font-bold mb-2">Curso de Piano</h3>
+					<p>
+						Domina el teclado con clases interactivas para
+						principiantes y niveles intermedios.
+					</p>
+				</div>
+				<div class="bg-gray-800 rounded-2xl p-6 w-72 shadow-lg">
+					<h3 class="text-xl font-bold mb-2">Canto Vocal</h3>
+					<p>
+						Entrena tu voz con profesionales que te guiarán en
+						técnica, respiración y expresión escénica.
+					</p>
+				</div>
+			</div>
+		</section>
+
+		<section id="contacto" class="bg-gray-800 py-16 px-4 text-center">
+			<h2 class="text-3xl font-semibold text-purple-400">Contáctanos</h2>
+			<p class="mt-4">
+				¿Tienes preguntas? Escríbenos a
+				<strong> RitmoAcademic@gmail.com</strong>
+			</p>
+		</section>
+
+		<footer class="bg-gray-950 text-center py-4 text-gray-500 text-sm">
+			&copy; 2025 RitmoAcademic. Todos los derechos reservados.
+		</footer>
 	</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
